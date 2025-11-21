@@ -1,11 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { DashboardStats } from "@/components/DashboardStats";
+import { AttendanceChart } from "@/components/AttendanceChart";
+import { EmployeeProfile } from "@/components/EmployeeProfile";
+import { QuickActions } from "@/components/QuickActions";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="space-y-6">
+      {/* Welcome Section */}
+      <div className="bg-gradient-light p-6 rounded-lg shadow-elevated border border-border">
+        <h1 className="text-2xl font-bold mb-2 bg-gradient-text bg-clip-text text-transparent">Welcome back, Rajesh!</h1>
+        <p className="text-foreground/80">Here's what's happening with your work today.</p>
+      </div>
+
+      {/* Dashboard Stats */}
+      <DashboardStats />
+
+      {/* Employee Profile */}
+      <EmployeeProfile />
+
+      {/* Main Content Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <AttendanceChart />
+        <QuickActions />
       </div>
     </div>
   );
